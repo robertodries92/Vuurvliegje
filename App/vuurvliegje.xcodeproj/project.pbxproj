@@ -18,6 +18,8 @@
 		7ACA314019F2D81D00CCA670 /* ZalandoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA313F19F2D81D00CCA670 /* ZalandoViewController.m */; };
 		7ACA314319F2E02400CCA670 /* InstaPictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA314219F2E02400CCA670 /* InstaPictureCollectionViewCell.m */; };
 		7ACA314619F2E3B000CCA670 /* SearchReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA314519F2E3B000CCA670 /* SearchReusableView.m */; };
+		7ACA314819F30BF100CCA670 /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDAD0419F2AF3100263E9C /* Gotham-Book.otf */; };
+		7ACA314919F30BF100CCA670 /* Gotham-XLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDAD0519F2AF3100263E9C /* Gotham-XLight.otf */; };
 		7ADDACFF19F2AD5D00263E9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADDACF419F2AD5D00263E9C /* AppDelegate.m */; };
 		7ADDAD0019F2AD5D00263E9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDACF919F2AD5D00263E9C /* Images.xcassets */; };
 		7ADDAD0119F2AD5D00263E9C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDACFB19F2AD5D00263E9C /* LaunchScreen.xib */; };
@@ -425,6 +427,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ACA314819F30BF100CCA670 /* Gotham-Book.otf in Resources */,
+				7ACA314919F30BF100CCA670 /* Gotham-XLight.otf in Resources */,
 				7ADDAD0219F2AD5D00263E9C /* Main.storyboard in Resources */,
 				7ADDAD0119F2AD5D00263E9C /* LaunchScreen.xib in Resources */,
 				7ADDAD0019F2AD5D00263E9C /* Images.xcassets in Resources */,

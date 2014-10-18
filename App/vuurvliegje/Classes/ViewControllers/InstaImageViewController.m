@@ -7,6 +7,7 @@
 //
 
 #import "InstaImageViewController.h"
+#import <UIImageView+AFNetworking.h>
 #import "Defines.h"
 
 @interface InstaImageViewController ()
@@ -19,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.imageView setImageWithURL:[NSURL URLWithString:self.picture.highres_imageURL]];
 }
 
 

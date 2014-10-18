@@ -17,6 +17,7 @@
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSArray   *categories;
+@property (nonatomic, strong) NSArray   *categoriesImages;
 @property (nonatomic, assign) NSInteger selectedIndex;
 
 @end
@@ -37,7 +38,7 @@
 - (void)setupMenu
 {
     self.categories = @[@"Popular Pictures",@"# HashTags"];
-    
+    self.categoriesImages = @[@"MockBackground",@"hashtag_menu"];
 }
 
 #pragma mark - TableView
@@ -59,7 +60,7 @@
 {
     NSString *identifier = @"menuCell";
     MainMenuTableViewCell *cell = (MainMenuTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
-    [cell configureTitle:self.categories[indexPath.row] background:@"MockBackground"];
+    [cell configureTitle:self.categories[indexPath.row] background:self.categoriesImages[indexPath.row]];
     return cell;
 }
 

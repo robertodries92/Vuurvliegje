@@ -35,7 +35,6 @@
 {
     [super viewDidAppear:animated];
     [self animateNextText];
-
 }
 
 - (void)animateNextText

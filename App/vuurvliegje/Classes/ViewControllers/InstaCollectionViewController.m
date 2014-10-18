@@ -32,6 +32,12 @@
     [self setupCollectionView];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self.collectionView reloadData];
+}
+
 - (void)setFetchType:(LRInstagramFetchType)fetchType
 {
     _fetchType = fetchType;
