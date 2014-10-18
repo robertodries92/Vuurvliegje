@@ -43,7 +43,7 @@ var getToken = function(imagePath,location,callback){
         .field('image_request[latitude]', location.lat)
         .field('image_request[locale]', 'en_US')
         .field('image_request[longitude]', location.lon)
-        .field('image_request[remote_image_url]', url +'/'+ imagePath.path)
+        .field('image_request[remote_image_url]',imagePath)
         .end(function (result) {
             if(result.status !== 200){
                 callback({
@@ -67,7 +67,7 @@ var getProduct = function(token,callback){
             if(err.reason !== 'running'){
                 callback(err,undefined);
             }
-            if(beginPoll > 10000){
+            if(beginPoll > 4000){
                 callback({
                     message : 'Sorry this image takes to long to process'
                 },undefined)
@@ -111,12 +111,7 @@ var poll = function(token,callback){
         });
 }
 exports.recognize = function(req,res){
-    publicizePicture(req,function(err,result){
-        if(err){
-            res.json(500,err);
-            return;
-        }
-        getToken(result,req.body.location,function(err,result){
+        getToken(req.body.image_url,req.body.location,function(err,result){
             if(err){
                 res.json(500,err);
                 return;
@@ -131,7 +126,7 @@ exports.recognize = function(req,res){
                res.json(200,result);
             })
         })
-    })
+
 }
 
 
