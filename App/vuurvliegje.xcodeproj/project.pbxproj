@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7ABA75C219F2ABED004A6E9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABA75C119F2ABED004A6E9F /* main.m */; };
-		7ABA75C519F2ABED004A6E9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABA75C419F2ABED004A6E9F /* AppDelegate.m */; };
-		7ABA75C819F2ABED004A6E9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABA75C719F2ABED004A6E9F /* ViewController.m */; };
-		7ABA75CB19F2ABED004A6E9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ABA75C919F2ABED004A6E9F /* Main.storyboard */; };
-		7ABA75CD19F2ABED004A6E9F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ABA75CC19F2ABED004A6E9F /* Images.xcassets */; };
-		7ABA75D019F2ABED004A6E9F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ABA75CE19F2ABED004A6E9F /* LaunchScreen.xib */; };
 		7ABA75DC19F2ABED004A6E9F /* vuurvliegjeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ABA75DB19F2ABED004A6E9F /* vuurvliegjeTests.m */; };
+		7ADDACFF19F2AD5D00263E9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADDACF419F2AD5D00263E9C /* AppDelegate.m */; };
+		7ADDAD0019F2AD5D00263E9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDACF919F2AD5D00263E9C /* Images.xcassets */; };
+		7ADDAD0119F2AD5D00263E9C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDACFB19F2AD5D00263E9C /* LaunchScreen.xib */; };
+		7ADDAD0219F2AD5D00263E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDACFD19F2AD5D00263E9C /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,16 +29,16 @@
 		7ABA75BC19F2ABED004A6E9F /* vuurvliegje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = vuurvliegje.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ABA75C019F2ABED004A6E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ABA75C119F2ABED004A6E9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7ABA75C319F2ABED004A6E9F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7ABA75C419F2ABED004A6E9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7ABA75C619F2ABED004A6E9F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7ABA75C719F2ABED004A6E9F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7ABA75CA19F2ABED004A6E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7ABA75CC19F2ABED004A6E9F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		7ABA75CF19F2ABED004A6E9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7ABA75D519F2ABED004A6E9F /* vuurvliegjeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vuurvliegjeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ABA75DA19F2ABED004A6E9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ABA75DB19F2ABED004A6E9F /* vuurvliegjeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vuurvliegjeTests.m; sourceTree = "<group>"; };
+		7ADDACF319F2AD5D00263E9C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7ADDACF419F2AD5D00263E9C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7ADDACF919F2AD5D00263E9C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7ADDACFC19F2AD5D00263E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7ADDACFE19F2AD5D00263E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7ADDAD0419F2AF3100263E9C /* Gotham-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Book.otf"; sourceTree = "<group>"; };
+		7ADDAD0519F2AF3100263E9C /* Gotham-XLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-XLight.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +80,8 @@
 		7ABA75BE19F2ABED004A6E9F /* vuurvliegje */ = {
 			isa = PBXGroup;
 			children = (
-				7ABA75C319F2ABED004A6E9F /* AppDelegate.h */,
-				7ABA75C419F2ABED004A6E9F /* AppDelegate.m */,
-				7ABA75C619F2ABED004A6E9F /* ViewController.h */,
-				7ABA75C719F2ABED004A6E9F /* ViewController.m */,
-				7ABA75C919F2ABED004A6E9F /* Main.storyboard */,
-				7ABA75CC19F2ABED004A6E9F /* Images.xcassets */,
-				7ABA75CE19F2ABED004A6E9F /* LaunchScreen.xib */,
+				7ADDACF019F2AD5D00263E9C /* Classes */,
+				7ADDACF719F2AD5D00263E9C /* Resources */,
 				7ABA75BF19F2ABED004A6E9F /* Supporting Files */,
 			);
 			path = vuurvliegje;
@@ -117,6 +111,83 @@
 				7ABA75DA19F2ABED004A6E9F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7ADDACF019F2AD5D00263E9C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7ADDACF119F2AD5D00263E9C /* Controllers */,
+				7ADDACF219F2AD5D00263E9C /* Startup */,
+				7ADDACF519F2AD5D00263E9C /* ViewControllers */,
+				7ADDACF619F2AD5D00263E9C /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7ADDACF119F2AD5D00263E9C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7ADDACF219F2AD5D00263E9C /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				7ADDACF319F2AD5D00263E9C /* AppDelegate.h */,
+				7ADDACF419F2AD5D00263E9C /* AppDelegate.m */,
+			);
+			path = Startup;
+			sourceTree = "<group>";
+		};
+		7ADDACF519F2AD5D00263E9C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7ADDACF619F2AD5D00263E9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7ADDACF719F2AD5D00263E9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7ADDAD0319F2ADFB00263E9C /* Fonts */,
+				7ADDACF819F2AD5D00263E9C /* Images */,
+				7ADDACFA19F2AD5D00263E9C /* Storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7ADDACF819F2AD5D00263E9C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7ADDACF919F2AD5D00263E9C /* Images.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		7ADDACFA19F2AD5D00263E9C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7ADDACFB19F2AD5D00263E9C /* LaunchScreen.xib */,
+				7ADDACFD19F2AD5D00263E9C /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		7ADDAD0319F2ADFB00263E9C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7ADDAD0419F2AF3100263E9C /* Gotham-Book.otf */,
+				7ADDAD0519F2AF3100263E9C /* Gotham-XLight.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +270,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ABA75CB19F2ABED004A6E9F /* Main.storyboard in Resources */,
-				7ABA75D019F2ABED004A6E9F /* LaunchScreen.xib in Resources */,
-				7ABA75CD19F2ABED004A6E9F /* Images.xcassets in Resources */,
+				7ADDAD0219F2AD5D00263E9C /* Main.storyboard in Resources */,
+				7ADDAD0119F2AD5D00263E9C /* LaunchScreen.xib in Resources */,
+				7ADDAD0019F2AD5D00263E9C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ABA75C819F2ABED004A6E9F /* ViewController.m in Sources */,
-				7ABA75C519F2ABED004A6E9F /* AppDelegate.m in Sources */,
+				7ADDACFF19F2AD5D00263E9C /* AppDelegate.m in Sources */,
 				7ABA75C219F2ABED004A6E9F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,20 +314,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7ABA75C919F2ABED004A6E9F /* Main.storyboard */ = {
+		7ADDACFB19F2AD5D00263E9C /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7ABA75CA19F2ABED004A6E9F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7ABA75CE19F2ABED004A6E9F /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7ABA75CF19F2ABED004A6E9F /* Base */,
+				7ADDACFC19F2AD5D00263E9C /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		7ADDACFD19F2AD5D00263E9C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7ADDACFE19F2AD5D00263E9C /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -414,6 +484,7 @@
 				7ABA75E119F2ABED004A6E9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7ABA75E219F2ABED004A6E9F /* Build configuration list for PBXNativeTarget "vuurvliegjeTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +493,7 @@
 				7ABA75E419F2ABED004A6E9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
