@@ -31,7 +31,7 @@
 
 - (void)setupMenu
 {
-    self.categories = @[@"Popular",@"Tags",@"Search",@"Settings"];
+    self.categories = @[@"Popular",@"#TAGS",@"Settings"];
     
 }
 
@@ -53,6 +53,11 @@
     MainMenuTableViewCell *cell = (MainMenuTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
     [cell configureTitle:self.categories[indexPath.row] background:@"MockBackground"];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 #pragma mark - Navigation
