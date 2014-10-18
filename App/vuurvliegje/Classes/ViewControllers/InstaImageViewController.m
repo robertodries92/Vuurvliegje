@@ -7,6 +7,7 @@
 //
 
 #import "InstaImageViewController.h"
+#import "Defines.h"
 
 @interface InstaImageViewController ()
 
@@ -23,6 +24,7 @@
 
 
 - (IBAction)didTapZalandoButton:(id)sender {
+    [self performSegueWithIdentifier:Segue_showLoadingController sender:self];
 }
 
 /*

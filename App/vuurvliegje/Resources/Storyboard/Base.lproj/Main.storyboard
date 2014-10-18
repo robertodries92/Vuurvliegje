@@ -35,7 +35,7 @@
                                                 <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MockBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ft6-tg-Nv6">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="149.5"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tags" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byg-9l-IVr">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byg-9l-IVr">
                                                     <rect key="frame" x="15" y="99" width="81.5" height="36"/>
                                                     <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="36"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -226,7 +226,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="88G-Fa-f5E" id="Iej-GU-8fK"/>
-                        <segue destination="OEq-gB-ezd" kind="show" id="VqP-yo-vUN"/>
+                        <segue destination="OEq-gB-ezd" kind="show" identifier="showLoadingController" id="VqP-yo-vUN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l4Q-1y-utk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -269,8 +269,10 @@
                     </view>
                     <connections>
                         <outlet property="firstLabel" destination="w5X-OL-pzx" id="Acu-Uv-efD"/>
+                        <outlet property="firstLabelXConstraint" destination="SYA-cO-oP0" id="aZL-z5-zYZ"/>
                         <outlet property="secondLabel" destination="Vuz-tJ-FyD" id="bBW-Gn-LeG"/>
-                        <segue destination="Tqg-OV-Tnj" kind="show" id="stW-Bc-1aE"/>
+                        <outlet property="secondLabelXConstraint" destination="FMU-Y2-6dW" id="ibW-WK-SKE"/>
+                        <segue destination="Tqg-OV-Tnj" kind="show" identifier="showZalandoController" id="stW-Bc-1aE"/>
                     </connections>
                 </viewController>
             </objects>
