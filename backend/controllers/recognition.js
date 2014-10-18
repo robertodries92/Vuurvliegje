@@ -58,7 +58,7 @@ var getToken = function(imagePath,location,callback){
 
 var getProduct = function(token,callback){
     //YpRA2VEsvfCrXR3cZuf4PQ
-    var beginPoll = 500;
+    var beginPoll = 100;
 
 
     var feedback = function(err,result){
@@ -72,7 +72,7 @@ var getProduct = function(token,callback){
                     message : 'Sorry this image takes to long to process'
                 },undefined)
             }else{
-                beginPoll = beginPoll * 2;
+                beginPoll = beginPoll * 1.5;
                 setTimeout(function(){
                     poll(token,feedback)
                 },beginPoll)
