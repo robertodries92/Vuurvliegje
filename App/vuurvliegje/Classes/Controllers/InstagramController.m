@@ -51,11 +51,18 @@
 
 - (void)fetchPictureForTag:(NSString *)tag handler:(instaHandler)handler
 {
+    tag = [tag stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSString *URL = [NSString stringWithFormat:INSTAGRAM_SEARCH_TAGS,tag,INSTAGRAM_CLIENT_ID];
     [self.manager GET:URL parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        
+        NSDictionary *dataList = responseObject[@"data"];
+        NSMutableArray *pictures = [@[] mutableCopy];
+        for (NSDictionary *pictureDictionary in dataList) {
+            InstaPicture *picture = [[InstaPicture alloc]initWithData:pictureDictionary];
+            [pictures addObject:picture];
+        }
+        handler(pictures,nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        
+        handler(nil,error);
     }];
 }
 

@@ -18,3 +18,4 @@ static NSString * const INSTAGRAM_SEARCH_USER = @"v1/users/search?q=%@&client_id
 //Segues
 
 static NSString * const Segue_showInstaCollection = @"showInstaCollection";
+static NSString * const Segue_showInstaPicture    = @"showInstaPicture";
