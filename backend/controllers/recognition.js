@@ -33,7 +33,7 @@ var getToken = function(imagePath,location,callback){
             lat : 30
         }
     }
-    console.log(location.lon);
+    console.log(url + imagePath.path);
     unirest.post('https://camfind.p.mashape.com/image_requests')
         .header('X-Mashape-Key', 'sVNIPhpf3bmshh69ErNMLx3hCRrqp1t68Kyjsn59pAbpG3S6sv')
         .field('focus[x]', '0')
@@ -43,7 +43,7 @@ var getToken = function(imagePath,location,callback){
         .field('image_request[latitude]', location.lat)
         .field('image_request[locale]', 'en_US')
         .field('image_request[longitude]', location.lon)
-        .field('image_request[remote_image_url]', url + imagePath.path)
+        .field('image_request[remote_image_url]', url +'/'+ imagePath.path)
         .end(function (result) {
             if(result.status !== 200){
                 callback({
