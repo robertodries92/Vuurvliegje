@@ -57,16 +57,56 @@ var getToken = function(imagePath,location,callback){
 }
 
 var getProduct = function(token,callback){
+    //YpRA2VEsvfCrXR3cZuf4PQ
+    var beginPoll = 500;
+
+
+    var feedback = function(err,result){
+        if(err){
+
+            if(err.reason !== 'running'){
+                callback(err,undefined);
+            }
+            if(beginPoll > 5000){
+                callback({
+                    message : 'Sorry this image takes to long to process'
+                },undefined)
+            }else{
+                beginPoll = beginPoll * 2;
+                setTimeout(function(){
+                    poll(token,feedback)
+                },beginPoll)
+            }
+            return;
+        }
+        callback(undefined,result);
+    }
+    setTimeout(function(){
+         poll(token,feedback)
+    },beginPoll)
+
+
+
+
+}
+var poll = function(token,callback){
     unirest.get('https://camfind.p.mashape.com/image_responses/' + token)
         .header('X-Mashape-Key', 'sVNIPhpf3bmshh69ErNMLx3hCRrqp1t68Kyjsn59pAbpG3S6sv')
         .end(function (result) {
             var body = result.body;
+            if(body.status === 'skipped'){
+                callback({
+                    reason : body.reason
+                },undefined);
+                return;
+            }
             if(body.status  !== 'completed'){
                 callback({
-                    message : 'Sorry but this image was to ' + body.reason
+                   reason : 'running'
                 },undefined)
                 return;
             }
+
             callback(undefined,body);
         });
 }
