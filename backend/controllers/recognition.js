@@ -67,7 +67,7 @@ var getProduct = function(token,callback){
             if(err.reason !== 'running'){
                 callback(err,undefined);
             }
-            if(beginPoll > 5000){
+            if(beginPoll > 10000){
                 callback({
                     message : 'Sorry this image takes to long to process'
                 },undefined)
