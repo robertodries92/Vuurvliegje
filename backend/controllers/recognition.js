@@ -33,7 +33,7 @@ var getToken = function(imagePath,location,callback){
             lat : 30
         }
     }
-    
+
     unirest.post('https://camfind.p.mashape.com/image_requests')
         .header('X-Mashape-Key', 'sVNIPhpf3bmshh69ErNMLx3hCRrqp1t68Kyjsn59pAbpG3S6sv')
         .field('focus[x]', '0')
@@ -111,6 +111,7 @@ var poll = function(token,callback){
         });
 }
 exports.recognize = function(req,res){
+    console.log(req.body.image_url);
         getToken(req.body.image_url,req.body.location,function(err,result){
             if(err){
                 res.json(500,err);
