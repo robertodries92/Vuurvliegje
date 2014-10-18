@@ -1,0 +1,98 @@
+var unirest = require('unirest');
+var fs = require('fs');
+var url =  'http://localhost:3000';
+var _ = require('underscore');
+/**
+ * body :
+ *
+ *  image : The image file
+ *  location : {lon:0,lat:0}
+ *
+ */
+
+var publicizePicture = function(req,callback){
+    fs.readFile(req.files.image.path, function (err, data) {
+        require('crypto').randomBytes(48, function(ex, buf) {
+            var token = buf.toString('hex');
+            var newPath = __dirname + '/../img/' + token + '.' + req.files.image.path.split('.').pop();
+            console.log(newPath);
+            fs.writeFile(newPath, data, function (err) {
+                callback(err,{
+                    path : token + '.' + req.files.image.path.split('.').pop()
+                })
+            });
+        });
+
+    });
+}
+
+var getToken = function(imagePath,location,callback){
+    if(!_.isObject(location)){
+        location = {
+            lon : 30,
+            lat : 30
+        }
+    }
+    console.log(location.lon);
+    unirest.post('https://camfind.p.mashape.com/image_requests')
+        .header('X-Mashape-Key', 'sVNIPhpf3bmshh69ErNMLx3hCRrqp1t68Kyjsn59pAbpG3S6sv')
+        .field('focus[x]', '0')
+        .field('focus[y]', '0')
+        .field('image_request[altitude]', '27')
+        .field('image_request[language]', 'en')
+        .field('image_request[latitude]', location.lat)
+        .field('image_request[locale]', 'en_US')
+        .field('image_request[longitude]', location.lon)
+        .field('image_request[remote_image_url]', url + imagePath.path)
+        .end(function (result) {
+            if(result.status !== 200){
+                callback({
+                    message : 'Server error at the camfind side'
+                },{});
+                return;
+            }
+            console.log(result);
+            callback(undefined,result.body);
+        });
+}
+
+var getProduct = function(token,callback){
+    unirest.get('https://camfind.p.mashape.com/image_responses/' + token)
+        .header('X-Mashape-Key', 'sVNIPhpf3bmshh69ErNMLx3hCRrqp1t68Kyjsn59pAbpG3S6sv')
+        .end(function (result) {
+            var body = result.body;
+            if(body.status  !== 'completed'){
+                callback({
+                    message : 'Sorry but this image was to ' + body.reason
+                },undefined)
+                return;
+            }
+            callback(undefined,body);
+        });
+}
+exports.recognize = function(req,res){
+    publicizePicture(req,function(err,result){
+        if(err){
+            res.json(500,err);
+            return;
+        }
+        getToken(result,req.body.location,function(err,result){
+            if(err){
+                res.json(500,err);
+                return;
+            }
+            console.log(result.token);
+            getProduct(result.token,function(err,result){
+
+                if(err){
+                    res.json(404,err);
+                    return;
+                }
+               res.json(200,result);
+            })
+        })
+    })
+}
+
+
+
