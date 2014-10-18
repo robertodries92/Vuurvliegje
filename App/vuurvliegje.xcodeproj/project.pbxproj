@@ -12,6 +12,7 @@
 		7ACA312519F2B9E600CCA670 /* WebserviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA312419F2B9E600CCA670 /* WebserviceController.m */; };
 		7ACA312819F2BDD100CCA670 /* InstagramController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA312719F2BDD100CCA670 /* InstagramController.m */; };
 		7ACA312C19F2BF9B00CCA670 /* InstaPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA312B19F2BF9B00CCA670 /* InstaPicture.m */; };
+		7ACA313719F2CEA500CCA670 /* InstaCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA313619F2CEA500CCA670 /* InstaCollectionViewController.m */; };
 		7ADDACFF19F2AD5D00263E9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADDACF419F2AD5D00263E9C /* AppDelegate.m */; };
 		7ADDAD0019F2AD5D00263E9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDACF919F2AD5D00263E9C /* Images.xcassets */; };
 		7ADDAD0119F2AD5D00263E9C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDACFB19F2AD5D00263E9C /* LaunchScreen.xib */; };
@@ -46,6 +47,8 @@
 		7ACA312719F2BDD100CCA670 /* InstagramController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramController.m; sourceTree = "<group>"; };
 		7ACA312A19F2BF9B00CCA670 /* InstaPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstaPicture.h; sourceTree = "<group>"; };
 		7ACA312B19F2BF9B00CCA670 /* InstaPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstaPicture.m; sourceTree = "<group>"; };
+		7ACA313519F2CEA500CCA670 /* InstaCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstaCollectionViewController.h; sourceTree = "<group>"; };
+		7ACA313619F2CEA500CCA670 /* InstaCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstaCollectionViewController.m; sourceTree = "<group>"; };
 		7ADDACF319F2AD5D00263E9C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7ADDACF419F2AD5D00263E9C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7ADDACF919F2AD5D00263E9C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -170,6 +173,45 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7ACA313019F2CB3700CCA670 /* 0_main */ = {
+			isa = PBXGroup;
+			children = (
+				7ADDAD0619F2B06900263E9C /* MainMenuViewController.h */,
+				7ADDAD0719F2B06900263E9C /* MainMenuViewController.m */,
+			);
+			name = 0_main;
+			sourceTree = "<group>";
+		};
+		7ACA313119F2CB4200CCA670 /* 1_instacollection */ = {
+			isa = PBXGroup;
+			children = (
+				7ACA313519F2CEA500CCA670 /* InstaCollectionViewController.h */,
+				7ACA313619F2CEA500CCA670 /* InstaCollectionViewController.m */,
+			);
+			name = 1_instacollection;
+			sourceTree = "<group>";
+		};
+		7ACA313219F2CB5100CCA670 /* 3_loading */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = 3_loading;
+			sourceTree = "<group>";
+		};
+		7ACA313319F2CBF000CCA670 /* 4_zalando */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = 4_zalando;
+			sourceTree = "<group>";
+		};
+		7ACA313419F2CD7E00CCA670 /* 2_instabig */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = 2_instabig;
+			sourceTree = "<group>";
+		};
 		7ADDACF019F2AD5D00263E9C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,8 +248,11 @@
 		7ADDACF519F2AD5D00263E9C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7ADDAD0619F2B06900263E9C /* MainMenuViewController.h */,
-				7ADDAD0719F2B06900263E9C /* MainMenuViewController.m */,
+				7ACA313019F2CB3700CCA670 /* 0_main */,
+				7ACA313119F2CB4200CCA670 /* 1_instacollection */,
+				7ACA313419F2CD7E00CCA670 /* 2_instabig */,
+				7ACA313219F2CB5100CCA670 /* 3_loading */,
+				7ACA313319F2CBF000CCA670 /* 4_zalando */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -404,6 +449,7 @@
 				7ADDACFF19F2AD5D00263E9C /* AppDelegate.m in Sources */,
 				7ADDAD0819F2B06900263E9C /* MainMenuViewController.m in Sources */,
 				7ABA75C219F2ABED004A6E9F /* main.m in Sources */,
+				7ACA313719F2CEA500CCA670 /* InstaCollectionViewController.m in Sources */,
 				7ACA312C19F2BF9B00CCA670 /* InstaPicture.m in Sources */,
 				7ACA312819F2BDD100CCA670 /* InstagramController.m in Sources */,
 				7ADDAD0C19F2B12C00263E9C /* MainMenuTableViewCell.m in Sources */,

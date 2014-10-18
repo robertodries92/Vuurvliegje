@@ -19,11 +19,13 @@
             self.latitude = location[@"latitude"];
             self.longnitude = location[@"longitude"];
         }
-        id url = data[@"images"][@"standard_resolution"];
+        id url = data[@"images"];
         if (url) {
-            self.imageURL = url;
+            self.highres_imageURL = url[@"standard_resolution"][@"url"];
+            self.lowres_imageURL = url[@"low_resolution"][@"url"];
+            self.thumb_imageURL = url[@"thumbnail"][@"url"];
         }
-        id name = data[@"caption"][@"from"][@"username"];
+        id name = data[@"user"][@"full_name"];
         if (name) {
             self.username = name;
         }

@@ -11,8 +11,9 @@
 @interface InstaPicture : NSObject
 
 @property (nonatomic, strong) NSString *username;
-@property (nonatomic, strong) NSString *standard_imageURL;
-@property (nonatomic, strong) NSString *thumbnail_imageURL;
+@property (nonatomic, strong) NSString *highres_imageURL;
+@property (nonatomic, strong) NSString *lowres_imageURL;
+@property (nonatomic, strong) NSString *thumb_imageURL;
 @property (nonatomic, strong) NSNumber *latitude;
 @property (nonatomic, strong) NSNumber *longnitude;
 

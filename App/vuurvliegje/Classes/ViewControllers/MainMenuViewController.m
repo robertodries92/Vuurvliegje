@@ -7,12 +7,17 @@
 //
 
 #import "MainMenuViewController.h"
+#import "InstaCollectionViewController.h"
+
 #import "MainMenuTableViewCell.h"
+#import "Defines.h"
 
 @interface MainMenuViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray *categories;
+
+@property (nonatomic, strong) NSArray   *categories;
+@property (nonatomic, assign) NSInteger selectedIndex;
 
 @end
 
@@ -57,15 +62,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    self.selectedIndex = indexPath.row;
+    [self performSegueWithIdentifier:Segue_showInstaCollection sender:self];
 }
 
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.destinationViewController isKindOfClass:[InstaCollectionViewController class]]) {
+        InstaCollectionViewController *controller = segue.destinationViewController;
+        controller.fetchType = self.selectedIndex;
+    }
 }
 
 

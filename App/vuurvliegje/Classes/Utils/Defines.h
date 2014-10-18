@@ -13,3 +13,8 @@ static NSString * const INSTAGRAM_BASE_URL = @"https://api.instagram.com";
 static NSString * const INSTAGRAM_SEARCH_POPULAR = @"/v1/media/popular?client_id=%@"; //CLIENT-ID
 static NSString * const INSTAGRAM_SEARCH_TAGS = @"/v1/tags/%@/media/recent?client_id=%@"; //TAG-NAME, CLIENT-ID
 static NSString * const INSTAGRAM_SEARCH_USER = @"v1/users/search?q=%@&client_id=%@"; //USERNAME, CLIENT-ID
+
+
+//Segues
+
+static NSString * const Segue_showInstaCollection = @"showInstaCollection";

@@ -91,18 +91,17 @@
                     <navigationItem key="navigationItem" id="tIR-uf-JbQ"/>
                     <connections>
                         <outlet property="tableView" destination="PSQ-gK-EnY" id="zy4-iG-9HL"/>
-                        <segue destination="hdc-rV-K19" kind="show" id="vfn-0M-gbA"/>
-                        <segue destination="UpU-fl-BNg" kind="show" id="8zs-74-8EQ"/>
+                        <segue destination="hdc-rV-K19" kind="show" identifier="showInstaCollection" id="vfn-0M-gbA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdo-rV-uwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-736" y="640"/>
         </scene>
-        <!--View Controller-->
+        <!--Insta Collection View Controller-->
         <scene sceneID="7a3-GD-D9r">
             <objects>
-                <viewController id="hdc-rV-K19" sceneMemberID="viewController">
+                <viewController id="hdc-rV-K19" customClass="InstaCollectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B4c-uo-SPp"/>
                         <viewControllerLayoutGuide type="bottom" id="jyN-0j-nAw"/>
@@ -111,26 +110,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Cwj-Da-UHK">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nNB-fp-2rc">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="44E-mH-aDa">
+                                    <size key="itemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pictureCell" id="XMe-8q-gaI">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wZr-Is-KuB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    </variation>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="wZr-Is-KuB"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="wZr-Is-KuB"/>
+                                            </mask>
+                                        </variation>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Cwj-Da-UHK" secondAttribute="trailing" id="8iv-1x-BlN"/>
-                            <constraint firstItem="Cwj-Da-UHK" firstAttribute="top" secondItem="YQF-1e-eBk" secondAttribute="top" id="YhG-Ld-iDO"/>
-                            <constraint firstAttribute="bottom" secondItem="Cwj-Da-UHK" secondAttribute="bottom" id="b3J-HP-RDt"/>
-                            <constraint firstItem="Cwj-Da-UHK" firstAttribute="leading" secondItem="YQF-1e-eBk" secondAttribute="leading" id="jHc-cL-oej"/>
+                            <constraint firstItem="nNB-fp-2rc" firstAttribute="leading" secondItem="YQF-1e-eBk" secondAttribute="leading" id="DcR-cn-nKE"/>
+                            <constraint firstAttribute="trailing" secondItem="nNB-fp-2rc" secondAttribute="trailing" id="Ea2-WV-jPj"/>
+                            <constraint firstItem="jyN-0j-nAw" firstAttribute="top" secondItem="nNB-fp-2rc" secondAttribute="bottom" id="G30-6b-Wqn"/>
+                            <constraint firstItem="nNB-fp-2rc" firstAttribute="top" secondItem="YQF-1e-eBk" secondAttribute="top" id="iup-cc-Avc"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="nNB-fp-2rc" id="u0H-iM-Xi0"/>
                         <segue destination="cR6-9y-FHw" kind="show" id="bSD-ai-1CM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qj6-yf-T9y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="232" y="156"/>
+            <point key="canvasLocation" x="219" y="576"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="cLM-eq-GYp">
@@ -166,6 +200,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="Tqg-OV-Tnj" kind="show" id="stW-Bc-1aE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m4w-Nm-xvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,43 +225,25 @@
             <point key="canvasLocation" x="-1482" y="640"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="OK5-n0-X4N">
+        <scene sceneID="MmW-Kd-0xh">
             <objects>
-                <viewController id="UpU-fl-BNg" sceneMemberID="viewController">
+                <viewController id="Tqg-OV-Tnj" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xRg-0U-DF3"/>
-                        <viewControllerLayoutGuide type="bottom" id="hNI-RV-puN"/>
+                        <viewControllerLayoutGuide type="top" id="7Oe-I2-fFF"/>
+                        <viewControllerLayoutGuide type="bottom" id="STV-PF-7HP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ZJJ-ib-ja7">
+                    <view key="view" contentMode="scaleToFill" id="c54-c4-8Jy">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="946-Ka-BHa">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="946-Ka-BHa" firstAttribute="leading" secondItem="ZJJ-ib-ja7" secondAttribute="leading" id="a7U-IA-rEE"/>
-                            <constraint firstItem="946-Ka-BHa" firstAttribute="top" secondItem="ZJJ-ib-ja7" secondAttribute="top" id="eJx-j6-ybJ"/>
-                            <constraint firstAttribute="trailing" secondItem="946-Ka-BHa" secondAttribute="trailing" id="ksK-T6-774"/>
-                            <constraint firstAttribute="bottom" secondItem="946-Ka-BHa" secondAttribute="bottom" id="sCP-at-jfm"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <segue destination="cR6-9y-FHw" kind="show" id="9nX-4J-S9I"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PeJ-g6-g50" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TrK-GH-HQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="232" y="928"/>
+            <point key="canvasLocation" x="2796" y="559"/>
         </scene>
     </scenes>
     <resources>
         <image name="MockBackground" width="400" height="226"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="9nX-4J-S9I"/>
-    </inferredMetricsTieBreakers>
 </document>
