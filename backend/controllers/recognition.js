@@ -70,7 +70,7 @@ var getProduct = function(token,callback){
             if(err.reason !== 'running'){
                 callback(err,undefined);
             }
-            if(beginPoll > 4000){
+            if(beginPoll > 2000){
                 callback(undefined,{
                     name : "black leather michael kors shoulder bag"
                 })
