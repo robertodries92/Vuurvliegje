@@ -32,14 +32,6 @@
     [self setupCollectionView];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    if (!self.fetchType) {
-        self.fetchType = LRInstagramFetchTypePopular;
-    }
-}
-
 - (void)setFetchType:(LRInstagramFetchType)fetchType
 {
     _fetchType = fetchType;
@@ -58,7 +50,6 @@
 {
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    [self.collectionView reloadData];
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath

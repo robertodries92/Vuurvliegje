@@ -19,7 +19,8 @@
 
 - (void)configureTitle:(NSString *)title background:(NSString *)imageName
 {
-    self.backgroundImageView.image = [UIImage imageNamed:imageName];
+    UIImage *img = [UIImage imageNamed:imageName];
+    self.backgroundImageView.image = img;
     self.menuLabel.text = title;
 }
 

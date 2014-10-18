@@ -36,12 +36,15 @@
 
 - (void)setupMenu
 {
-    self.categories = @[@"Popular",@"#TAGS",@"Settings"];
+    self.categories = @[@"Popular Pictures",@"# HashTags"];
     
 }
 
 #pragma mark - TableView
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return (CGRectGetHeight(self.view.bounds) - 100) / 2;
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;

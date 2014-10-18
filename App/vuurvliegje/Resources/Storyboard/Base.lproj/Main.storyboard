@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="PSQ-gK-EnY">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="540"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="560"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" id="xm9-B0-hRv" customClass="MainMenuTableViewCell">
@@ -32,30 +32,39 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xm9-B0-hRv" id="mJs-LV-K6Q">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MockBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ft6-tg-Nv6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="149.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MockBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ft6-tg-Nv6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="NTy-dd-ipX">
+                                                    <rect key="frame" x="0.0" y="50" width="600" height="100"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byg-9l-IVr">
                                                     <rect key="frame" x="15" y="99" width="81.5" height="36"/>
                                                     <fontDescription key="fontDescription" name="Gotham-Book" family="Gotham" pointSize="36"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="NTy-dd-ipX" secondAttribute="bottom" id="3yg-1B-Bqt"/>
+                                                <constraint firstItem="ft6-tg-Nv6" firstAttribute="height" secondItem="NTy-dd-ipX" secondAttribute="height" multiplier="0.2" id="9qW-LE-6Ch"/>
                                                 <constraint firstAttribute="trailing" secondItem="ft6-tg-Nv6" secondAttribute="trailing" id="FnB-rc-1nH"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="ft6-tg-Nv6" secondAttribute="trailing" id="J5R-gx-9M0"/>
+                                                <constraint firstItem="NTy-dd-ipX" firstAttribute="leading" secondItem="mJs-LV-K6Q" secondAttribute="leading" id="K55-fn-2Os"/>
                                                 <constraint firstAttribute="bottom" secondItem="ft6-tg-Nv6" secondAttribute="bottom" id="Lag-jM-yzG"/>
+                                                <constraint firstAttribute="trailing" secondItem="NTy-dd-ipX" secondAttribute="trailing" id="Q5F-KD-Tch"/>
                                                 <constraint firstItem="ft6-tg-Nv6" firstAttribute="leading" secondItem="mJs-LV-K6Q" secondAttribute="leading" id="UDp-oZ-BDX"/>
                                                 <constraint firstItem="ft6-tg-Nv6" firstAttribute="top" secondItem="mJs-LV-K6Q" secondAttribute="top" id="WvD-Z6-MDj"/>
                                                 <constraint firstItem="ft6-tg-Nv6" firstAttribute="leading" secondItem="mJs-LV-K6Q" secondAttribute="leadingMargin" id="gdi-u6-gXo"/>
                                                 <constraint firstItem="byg-9l-IVr" firstAttribute="leading" secondItem="mJs-LV-K6Q" secondAttribute="leading" constant="15" id="kgK-aT-cYE"/>
                                                 <constraint firstAttribute="bottom" secondItem="byg-9l-IVr" secondAttribute="bottom" constant="14.5" id="kkT-RV-DtT"/>
+                                                <constraint firstItem="ft6-tg-Nv6" firstAttribute="height" secondItem="NTy-dd-ipX" secondAttribute="height" multiplier="1.5" id="rH4-Vd-XTc"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="ft6-tg-Nv6" secondAttribute="bottom" id="seS-1g-pPv"/>
                                                 <constraint firstItem="ft6-tg-Nv6" firstAttribute="top" secondItem="mJs-LV-K6Q" secondAttribute="topMargin" id="yZQ-GH-SAE"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="9qW-LE-6Ch"/>
                                                     <exclude reference="J5R-gx-9M0"/>
                                                     <exclude reference="gdi-u6-gXo"/>
                                                     <exclude reference="seS-1g-pPv"/>
@@ -71,10 +80,10 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8p-gs-ZeY">
-                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="ilA-2P-EVY"/>
+                                    <constraint firstAttribute="height" constant="40" id="ilA-2P-EVY"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -82,12 +91,18 @@
                         <constraints>
                             <constraint firstItem="PSQ-gK-EnY" firstAttribute="leading" secondItem="FYC-pz-4zQ" secondAttribute="leading" id="1ny-gX-U3N"/>
                             <constraint firstItem="n8p-gs-ZeY" firstAttribute="top" secondItem="PSQ-gK-EnY" secondAttribute="bottom" id="D9f-HL-Qlz"/>
+                            <constraint firstItem="n8p-gs-ZeY" firstAttribute="top" secondItem="PSQ-gK-EnY" secondAttribute="bottom" id="RCo-71-u5E"/>
                             <constraint firstItem="PSQ-gK-EnY" firstAttribute="top" secondItem="FYC-pz-4zQ" secondAttribute="top" id="W4x-6q-5nt"/>
                             <constraint firstAttribute="trailing" secondItem="n8p-gs-ZeY" secondAttribute="trailing" id="X4N-L7-mTI"/>
                             <constraint firstItem="VoN-U8-gJ6" firstAttribute="top" secondItem="n8p-gs-ZeY" secondAttribute="bottom" id="bjv-TP-gTx"/>
                             <constraint firstAttribute="trailing" secondItem="PSQ-gK-EnY" secondAttribute="trailing" id="raj-B6-5jS"/>
                             <constraint firstItem="n8p-gs-ZeY" firstAttribute="leading" secondItem="FYC-pz-4zQ" secondAttribute="leading" id="zqU-8d-UUm"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="D9f-HL-Qlz"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="tIR-uf-JbQ"/>
                     <connections>
@@ -128,8 +143,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JvR-2h-vA2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JvR-2h-vA2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -330,5 +345,6 @@
     </scenes>
     <resources>
         <image name="MockBackground" width="400" height="226"/>
+        <image name="gradient" width="656" height="433"/>
     </resources>
 </document>
