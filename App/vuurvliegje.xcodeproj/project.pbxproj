@@ -12,6 +12,14 @@
 		7ACA312519F2B9E600CCA670 /* WebserviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA312419F2B9E600CCA670 /* WebserviceController.m */; };
 		7ACA312819F2BDD100CCA670 /* InstagramController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA312719F2BDD100CCA670 /* InstagramController.m */; };
 		7ACA312C19F2BF9B00CCA670 /* InstaPicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA312B19F2BF9B00CCA670 /* InstaPicture.m */; };
+		7ACA313719F2CEA500CCA670 /* InstaCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA313619F2CEA500CCA670 /* InstaCollectionViewController.m */; };
+		7ACA313A19F2D80000CCA670 /* InstaImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA313919F2D80000CCA670 /* InstaImageViewController.m */; };
+		7ACA313D19F2D80C00CCA670 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA313C19F2D80C00CCA670 /* LoadingViewController.m */; };
+		7ACA314019F2D81D00CCA670 /* ZalandoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA313F19F2D81D00CCA670 /* ZalandoViewController.m */; };
+		7ACA314319F2E02400CCA670 /* InstaPictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA314219F2E02400CCA670 /* InstaPictureCollectionViewCell.m */; };
+		7ACA314619F2E3B000CCA670 /* SearchReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA314519F2E3B000CCA670 /* SearchReusableView.m */; };
+		7ACA314819F30BF100CCA670 /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDAD0419F2AF3100263E9C /* Gotham-Book.otf */; };
+		7ACA314919F30BF100CCA670 /* Gotham-XLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDAD0519F2AF3100263E9C /* Gotham-XLight.otf */; };
 		7ADDACFF19F2AD5D00263E9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADDACF419F2AD5D00263E9C /* AppDelegate.m */; };
 		7ADDAD0019F2AD5D00263E9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDACF919F2AD5D00263E9C /* Images.xcassets */; };
 		7ADDAD0119F2AD5D00263E9C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDACFB19F2AD5D00263E9C /* LaunchScreen.xib */; };
@@ -46,6 +54,18 @@
 		7ACA312719F2BDD100CCA670 /* InstagramController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramController.m; sourceTree = "<group>"; };
 		7ACA312A19F2BF9B00CCA670 /* InstaPicture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstaPicture.h; sourceTree = "<group>"; };
 		7ACA312B19F2BF9B00CCA670 /* InstaPicture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstaPicture.m; sourceTree = "<group>"; };
+		7ACA313519F2CEA500CCA670 /* InstaCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstaCollectionViewController.h; sourceTree = "<group>"; };
+		7ACA313619F2CEA500CCA670 /* InstaCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstaCollectionViewController.m; sourceTree = "<group>"; };
+		7ACA313819F2D80000CCA670 /* InstaImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstaImageViewController.h; sourceTree = "<group>"; };
+		7ACA313919F2D80000CCA670 /* InstaImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstaImageViewController.m; sourceTree = "<group>"; };
+		7ACA313B19F2D80C00CCA670 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
+		7ACA313C19F2D80C00CCA670 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
+		7ACA313E19F2D81D00CCA670 /* ZalandoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZalandoViewController.h; sourceTree = "<group>"; };
+		7ACA313F19F2D81D00CCA670 /* ZalandoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZalandoViewController.m; sourceTree = "<group>"; };
+		7ACA314119F2E02400CCA670 /* InstaPictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstaPictureCollectionViewCell.h; sourceTree = "<group>"; };
+		7ACA314219F2E02400CCA670 /* InstaPictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstaPictureCollectionViewCell.m; sourceTree = "<group>"; };
+		7ACA314419F2E3B000CCA670 /* SearchReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchReusableView.h; sourceTree = "<group>"; };
+		7ACA314519F2E3B000CCA670 /* SearchReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchReusableView.m; sourceTree = "<group>"; };
 		7ADDACF319F2AD5D00263E9C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7ADDACF419F2AD5D00263E9C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7ADDACF919F2AD5D00263E9C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -170,6 +190,60 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7ACA313019F2CB3700CCA670 /* 0_main */ = {
+			isa = PBXGroup;
+			children = (
+				7ADDAD0619F2B06900263E9C /* MainMenuViewController.h */,
+				7ADDAD0719F2B06900263E9C /* MainMenuViewController.m */,
+			);
+			name = 0_main;
+			sourceTree = "<group>";
+		};
+		7ACA313119F2CB4200CCA670 /* 1_instacollection */ = {
+			isa = PBXGroup;
+			children = (
+				7ACA313519F2CEA500CCA670 /* InstaCollectionViewController.h */,
+				7ACA313619F2CEA500CCA670 /* InstaCollectionViewController.m */,
+			);
+			name = 1_instacollection;
+			sourceTree = "<group>";
+		};
+		7ACA313219F2CB5100CCA670 /* 3_loading */ = {
+			isa = PBXGroup;
+			children = (
+				7ACA313B19F2D80C00CCA670 /* LoadingViewController.h */,
+				7ACA313C19F2D80C00CCA670 /* LoadingViewController.m */,
+			);
+			name = 3_loading;
+			sourceTree = "<group>";
+		};
+		7ACA313319F2CBF000CCA670 /* 4_zalando */ = {
+			isa = PBXGroup;
+			children = (
+				7ACA313E19F2D81D00CCA670 /* ZalandoViewController.h */,
+				7ACA313F19F2D81D00CCA670 /* ZalandoViewController.m */,
+			);
+			name = 4_zalando;
+			sourceTree = "<group>";
+		};
+		7ACA313419F2CD7E00CCA670 /* 2_instabig */ = {
+			isa = PBXGroup;
+			children = (
+				7ACA313819F2D80000CCA670 /* InstaImageViewController.h */,
+				7ACA313919F2D80000CCA670 /* InstaImageViewController.m */,
+			);
+			name = 2_instabig;
+			sourceTree = "<group>";
+		};
+		7ACA314719F2E3B600CCA670 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				7ACA314419F2E3B000CCA670 /* SearchReusableView.h */,
+				7ACA314519F2E3B000CCA670 /* SearchReusableView.m */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
 		7ADDACF019F2AD5D00263E9C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,8 +280,11 @@
 		7ADDACF519F2AD5D00263E9C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				7ADDAD0619F2B06900263E9C /* MainMenuViewController.h */,
-				7ADDAD0719F2B06900263E9C /* MainMenuViewController.m */,
+				7ACA313019F2CB3700CCA670 /* 0_main */,
+				7ACA313119F2CB4200CCA670 /* 1_instacollection */,
+				7ACA313419F2CD7E00CCA670 /* 2_instabig */,
+				7ACA313219F2CB5100CCA670 /* 3_loading */,
+				7ACA313319F2CBF000CCA670 /* 4_zalando */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -216,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				7ADDAD0919F2B11800263E9C /* Cells */,
+				7ACA314719F2E3B600CCA670 /* Headers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,6 +339,8 @@
 			children = (
 				7ADDAD0A19F2B12C00263E9C /* MainMenuTableViewCell.h */,
 				7ADDAD0B19F2B12C00263E9C /* MainMenuTableViewCell.m */,
+				7ACA314119F2E02400CCA670 /* InstaPictureCollectionViewCell.h */,
+				7ACA314219F2E02400CCA670 /* InstaPictureCollectionViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -347,6 +427,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ACA314819F30BF100CCA670 /* Gotham-Book.otf in Resources */,
+				7ACA314919F30BF100CCA670 /* Gotham-XLight.otf in Resources */,
 				7ADDAD0219F2AD5D00263E9C /* Main.storyboard in Resources */,
 				7ADDAD0119F2AD5D00263E9C /* LaunchScreen.xib in Resources */,
 				7ADDAD0019F2AD5D00263E9C /* Images.xcassets in Resources */,
@@ -402,10 +484,16 @@
 			files = (
 				7ACA312519F2B9E600CCA670 /* WebserviceController.m in Sources */,
 				7ADDACFF19F2AD5D00263E9C /* AppDelegate.m in Sources */,
+				7ACA314619F2E3B000CCA670 /* SearchReusableView.m in Sources */,
+				7ACA314319F2E02400CCA670 /* InstaPictureCollectionViewCell.m in Sources */,
 				7ADDAD0819F2B06900263E9C /* MainMenuViewController.m in Sources */,
+				7ACA314019F2D81D00CCA670 /* ZalandoViewController.m in Sources */,
 				7ABA75C219F2ABED004A6E9F /* main.m in Sources */,
+				7ACA313719F2CEA500CCA670 /* InstaCollectionViewController.m in Sources */,
 				7ACA312C19F2BF9B00CCA670 /* InstaPicture.m in Sources */,
 				7ACA312819F2BDD100CCA670 /* InstagramController.m in Sources */,
+				7ACA313D19F2D80C00CCA670 /* LoadingViewController.m in Sources */,
+				7ACA313A19F2D80000CCA670 /* InstaImageViewController.m in Sources */,
 				7ADDAD0C19F2B12C00263E9C /* MainMenuTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
