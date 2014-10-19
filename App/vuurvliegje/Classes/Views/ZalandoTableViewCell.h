@@ -12,5 +12,6 @@
 @interface ZalandoTableViewCell : UITableViewCell
 
 - (void)configure:(ZalandoData *)data;
+- (void)setRemoteImage:(NSString *)remoteImageURLString inTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath;
 
 @end

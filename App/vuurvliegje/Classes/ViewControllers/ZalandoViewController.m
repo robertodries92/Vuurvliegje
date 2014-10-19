@@ -23,6 +23,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -39,7 +40,9 @@
 {
     NSString *identifier = @"zalandoCell";
     ZalandoTableViewCell *cell = (ZalandoTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
-    [cell configure:self.items[indexPath.row]];
+    ZalandoData *data = self.items[indexPath.row];
+    [cell configure:data];
+    [cell setRemoteImage:data.imgURL inTableView:tableView atIndexPath:indexPath];
     return cell;
 }
 

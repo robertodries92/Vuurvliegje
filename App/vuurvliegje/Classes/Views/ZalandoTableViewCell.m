@@ -24,9 +24,26 @@
 
 - (void)configure:(ZalandoData *)data
 {
-    [self.imageView setImageWithURL:[NSURL URLWithString:data.imgURL]];
     self.titleLabel.text = data.productTitle;
     self.priceLabel.text = data.price;
 }
+
+- (void)setRemoteImage:(NSString *)remoteImageURLString inTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath {
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:remoteImageURLString]];
+    __weak UITableView *weakTableView = tableView;
+    __weak UITableViewCell *weakSelf = self;
+    __weak UIImageView *weakImageView = self.productImageView;
+    [self.productImageView setImageWithURLRequest:request placeholderImage:nil success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+        if ([weakTableView.visibleCells containsObject:weakSelf]) {
+            [UIView transitionWithView:weakImageView duration:0.15f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+                weakImageView.image = image;
+            } completion:NULL];
+        }
+        else {
+            weakImageView.image = image;
+        }
+    } failure:nil];
+}
+
 
 @end

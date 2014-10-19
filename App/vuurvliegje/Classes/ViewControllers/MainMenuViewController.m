@@ -44,7 +44,7 @@
 #pragma mark - TableView
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return (CGRectGetHeight(self.view.bounds) - 100) / 2;
+    return (CGRectGetHeight(self.view.bounds) - 120) / 2;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
