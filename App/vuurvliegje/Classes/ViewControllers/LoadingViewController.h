@@ -10,4 +10,6 @@
 
 @interface LoadingViewController : UIViewController
 
+@property (nonatomic, strong) NSString *imgURL;
+
 @end

@@ -10,4 +10,6 @@
 
 @interface ZalandoViewController : UIViewController
 
+@property (nonatomic, strong) NSArray *items;
+
 @end

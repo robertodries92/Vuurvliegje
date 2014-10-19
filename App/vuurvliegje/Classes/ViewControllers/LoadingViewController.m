@@ -7,6 +7,10 @@
 //
 
 #import "LoadingViewController.h"
+#import "ZalandoViewController.h"
+#import "ZalandoController.h"
+#import "ZalandoData.h"
+#import "Defines.h"
 
 @interface LoadingViewController ()
 
@@ -16,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *secondLabelXConstraint;
 @property (nonatomic, strong) NSArray *loadingTexts;
 @property (nonatomic, assign) NSInteger textIndex;
+@property (nonatomic, strong) NSArray *foundItems;
 @end
 
 @implementation LoadingViewController
@@ -24,12 +29,19 @@
     [super viewDidLoad];
     self.loadingTexts = @[@"IK",@"GA",@"ZO",@"NAAR",@"EEN",@"CLUB",@"OM",@"EEN",@"GIN",@"TE",@"DRINKEN"];
     self.textIndex = 0;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:NO];
+    __weak LoadingViewController *weakSelf = self;
+    [[ZalandoController sharedInstance] fetchZoolandersWithImage:self.imgURL handler:^(NSArray *data, NSError *error) {
+        weakSelf.foundItems = data;
+        [weakSelf performSegueWithIdentifier:Segue_showZalandoController sender:self];
+    }];
+    
 }
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -65,5 +77,12 @@
     }];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.destinationViewController isKindOfClass:[ZalandoViewController class]]) {
+        ZalandoViewController *controller = segue.destinationViewController;
+        controller.items = self.foundItems;
+    }
+}
 
 @end
