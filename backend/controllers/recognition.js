@@ -133,6 +133,7 @@ var getSearch = function(text,callback){
                 var temp = {};
 
                 temp.image_url = item.find('.imageBox img').attr('longdesc');
+                temp.title  = item.find('.imageBox img').attr('title');
                 temp.url = 'http://www.zalando.co.uk' + item.attr('href');
                 temp.price = item.find('.priceBox .specialPrice').length >0 ? item.find('.priceBox .specialPrice').text():item.find('.priceBox .price').text()
 
