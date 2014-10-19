@@ -27,7 +27,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.loadingTexts = @[@"IK",@"GA",@"ZO",@"NAAR",@"EEN",@"CLUB",@"OM",@"EEN",@"GIN",@"TE",@"DRINKEN"];
+    self.loadingTexts = @[@"Uploading image",
+                          @"Interpreting image",
+                          @"Determining image",
+                          @"Determining Colors",
+                          @"Learning how to do the salsa",
+                          @"Going to Westend to salsa",
+                          @"Club closes at 3AM",
+                          @"Finish project while ..."];
     self.textIndex = 0;
     
 }
@@ -42,10 +49,6 @@
         [weakSelf performSegueWithIdentifier:Segue_showZalandoController sender:self];
     }];
     
-}
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
     [self animateNextText];
 }
 

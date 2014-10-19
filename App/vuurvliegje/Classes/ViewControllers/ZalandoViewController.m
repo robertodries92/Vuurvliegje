@@ -7,6 +7,8 @@
 //
 
 #import "ZalandoViewController.h"
+#import "ZalandoTableViewCell.h"
+#import "ZalandoData.h"
 
 @interface ZalandoViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -30,13 +32,22 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return [self.items count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    NSString *identifier = @"zalandoCell";
+    ZalandoTableViewCell *cell = (ZalandoTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
+    [cell configure:self.items[indexPath.row]];
+    return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *zalandoURL = ((ZalandoData *)self.items[indexPath.row]).zalandoURL;
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:zalandoURL]];
+
+}
 
 @end

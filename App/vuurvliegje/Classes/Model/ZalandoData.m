@@ -17,6 +17,7 @@
         self.imgURL = data[@"image_url"];
         self.zalandoURL = data[@"url"];
         self.price = data[@"price"];
+        self.productTitle = data[@"title"];
     }
     return self;
 }

@@ -12,6 +12,7 @@
 @property (nonatomic, strong) NSString *imgURL;
 @property (nonatomic, strong) NSString *price;
 @property (nonatomic, strong) NSString *zalandoURL;
+@property (nonatomic, strong) NSString *productTitle;
 
 - (id)initWithData:(NSDictionary *)data;
 
