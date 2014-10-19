@@ -7,6 +7,7 @@
 //
 
 #import "InstaImageViewController.h"
+#import "LoadingViewController.h"
 #import <UIImageView+AFNetworking.h>
 #import "Defines.h"
 
@@ -28,6 +29,13 @@
     [self performSegueWithIdentifier:Segue_showLoadingController sender:self];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.destinationViewController isKindOfClass:[LoadingViewController class]]) {
+        LoadingViewController *controller = segue.destinationViewController;
+        controller.imgURL = self.picture.highres_imageURL;
+    }
+}
 /*
 #pragma mark - Navigation
 

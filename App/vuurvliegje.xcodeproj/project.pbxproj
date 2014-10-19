@@ -20,6 +20,8 @@
 		7ACA314619F2E3B000CCA670 /* SearchReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA314519F2E3B000CCA670 /* SearchReusableView.m */; };
 		7ACA314819F30BF100CCA670 /* Gotham-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDAD0419F2AF3100263E9C /* Gotham-Book.otf */; };
 		7ACA314919F30BF100CCA670 /* Gotham-XLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDAD0519F2AF3100263E9C /* Gotham-XLight.otf */; };
+		7ACA314C19F311CD00CCA670 /* ZalandoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA314B19F311CD00CCA670 /* ZalandoController.m */; };
+		7ACA314F19F315CA00CCA670 /* ZalandoData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACA314E19F315CA00CCA670 /* ZalandoData.m */; };
 		7ADDACFF19F2AD5D00263E9C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADDACF419F2AD5D00263E9C /* AppDelegate.m */; };
 		7ADDAD0019F2AD5D00263E9C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDACF919F2AD5D00263E9C /* Images.xcassets */; };
 		7ADDAD0119F2AD5D00263E9C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ADDACFB19F2AD5D00263E9C /* LaunchScreen.xib */; };
@@ -66,6 +68,10 @@
 		7ACA314219F2E02400CCA670 /* InstaPictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstaPictureCollectionViewCell.m; sourceTree = "<group>"; };
 		7ACA314419F2E3B000CCA670 /* SearchReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchReusableView.h; sourceTree = "<group>"; };
 		7ACA314519F2E3B000CCA670 /* SearchReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchReusableView.m; sourceTree = "<group>"; };
+		7ACA314A19F311CD00CCA670 /* ZalandoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZalandoController.h; sourceTree = "<group>"; };
+		7ACA314B19F311CD00CCA670 /* ZalandoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZalandoController.m; sourceTree = "<group>"; };
+		7ACA314D19F315CA00CCA670 /* ZalandoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZalandoData.h; sourceTree = "<group>"; };
+		7ACA314E19F315CA00CCA670 /* ZalandoData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZalandoData.m; sourceTree = "<group>"; };
 		7ADDACF319F2AD5D00263E9C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7ADDACF419F2AD5D00263E9C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7ADDACF919F2AD5D00263E9C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -186,6 +192,8 @@
 			children = (
 				7ACA312A19F2BF9B00CCA670 /* InstaPicture.h */,
 				7ACA312B19F2BF9B00CCA670 /* InstaPicture.m */,
+				7ACA314D19F315CA00CCA670 /* ZalandoData.h */,
+				7ACA314E19F315CA00CCA670 /* ZalandoData.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +272,8 @@
 				7ACA312419F2B9E600CCA670 /* WebserviceController.m */,
 				7ACA312619F2BDD100CCA670 /* InstagramController.h */,
 				7ACA312719F2BDD100CCA670 /* InstagramController.m */,
+				7ACA314A19F311CD00CCA670 /* ZalandoController.h */,
+				7ACA314B19F311CD00CCA670 /* ZalandoController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -487,11 +497,13 @@
 				7ACA314619F2E3B000CCA670 /* SearchReusableView.m in Sources */,
 				7ACA314319F2E02400CCA670 /* InstaPictureCollectionViewCell.m in Sources */,
 				7ADDAD0819F2B06900263E9C /* MainMenuViewController.m in Sources */,
+				7ACA314C19F311CD00CCA670 /* ZalandoController.m in Sources */,
 				7ACA314019F2D81D00CCA670 /* ZalandoViewController.m in Sources */,
 				7ABA75C219F2ABED004A6E9F /* main.m in Sources */,
 				7ACA313719F2CEA500CCA670 /* InstaCollectionViewController.m in Sources */,
 				7ACA312C19F2BF9B00CCA670 /* InstaPicture.m in Sources */,
 				7ACA312819F2BDD100CCA670 /* InstagramController.m in Sources */,
+				7ACA314F19F315CA00CCA670 /* ZalandoData.m in Sources */,
 				7ACA313D19F2D80C00CCA670 /* LoadingViewController.m in Sources */,
 				7ACA313A19F2D80000CCA670 /* InstaImageViewController.m in Sources */,
 				7ADDAD0C19F2B12C00263E9C /* MainMenuTableViewCell.m in Sources */,
