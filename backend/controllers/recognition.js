@@ -61,8 +61,8 @@ var getToken = function(imagePath,location,callback){
 
 var getProduct = function(token,callback){
     //YpRA2VEsvfCrXR3cZuf4PQ
-    var beginPoll = 100;
-
+    var beginPoll = 200;
+    var count = 0;
 
     var feedback = function(err,result){
         if(err){
@@ -70,12 +70,12 @@ var getProduct = function(token,callback){
             if(err.reason !== 'running'){
                 callback(err,undefined);
             }
-            if(beginPoll > 1000){
+            if(count>30){
                 callback(undefined,{
                     name : "black leather michael kors shoulder bag"
                 })
             }else{
-                beginPoll = beginPoll * 2;
+                count += 1;
                 setTimeout(function(){
                     poll(token,feedback)
                 },beginPoll)
@@ -96,6 +96,7 @@ var poll = function(token,callback){
     unirest.get('https://camfind.p.mashape.com/image_responses/' + token)
         .header('X-Mashape-Key', 'sVNIPhpf3bmshh69ErNMLx3hCRrqp1t68Kyjsn59pAbpG3S6sv')
         .end(function (result) {
+            console.log(result.body);
             var body = result.body;
             if(body.status === 'skipped'){
                 callback({
