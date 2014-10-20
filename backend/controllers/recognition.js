@@ -38,7 +38,7 @@ var getToken = function(imagePath,location,callback){
     }
 
     unirest.post('https://camfind.p.mashape.com/image_requests')
-        .header('X-Mashape-Key', 'sVNIPhpf3bmshh69ErNMLx3hCRrqp1t68Kyjsn59pAbpG3S6sv')
+        .header('X-Mashape-Key', 'xx')
         .field('focus[x]', '0')
         .field('focus[y]', '0')
         .field('image_request[altitude]', '27')
